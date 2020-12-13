@@ -1,0 +1,389 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: black;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    align-items: center;
+}
+.logo {
+    margin-left: 100px;
+}
+.nav-links {
+    margin-right: 100px;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+@media (max-width: 1200px) {
+    .nav-links {
+        width: 25%;
+    }
+}
+.nav-links li {
+    list-style: none;
+}
+.nav-links li a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.nav-links li a:hover {
+    color: #3F51B5;
+}
+
+.all-links {
+    margin-left: 5vw;
+    margin-top: 3rem;
+}
+.all-links a {
+    text-decoration: none;
+    margin: 0px 10px;
+}
+.all-links a i {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease;
+}
+.all-links a:hover i{
+    color: #3F51B5;
+}
+/* Mobile Bottom Navbar */
+.mob-nav {
+    position: fixed;
+    left: 30%;
+    bottom: 0;
+    border-radius: 15px;
+    width: 40%;
+    margin: 10px;
+    /* background-color: #3F51B5; */
+    background-color: #F3EEEA;
+    text-align: center;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+}
+
+.mob-nav a{
+    text-decoration: none;
+    color: #222;
+}
+.link a i {
+    font-size: 18px;
+    padding: 4px 0px;
+}
+.link a p {
+    font-size: 13px;
+}
+.link a:hover {
+    color: #3F51B5;
+}
+
+
+
+/* Left Nav*/
+.left-nav {
+    height: 100vh;
+    top: 0;
+    width: 50%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(-110%);
+    transition: all 1s ease;
+    position: fixed;
+}
+
+.left-nav.active {
+    transform: translateX(0%);
+}
+
+.l-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30vh;
+}
+.l-nav h1{
+    color: black;
+    font-size: 24px;
+    font-weight: lighter;
+}
+.l-nav div a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+.l-nav div a:hover {
+    color: #3F51B5;
+}
+.l-nav div a i{
+    font-size: 24px;
+    padding-right: 10px;
+}
+.l-nav div a p {
+    display: inline;
+}
+
+/* SHOWING REQUIRED NAVS */
+@media (max-width: 900px) {
+    .mob-nav {
+        display: flex;
+        width: 60%;
+        left: 20%;
+    }
+    .nav-links {
+        display: none;
+    }
+    nav {
+        justify-content: left;
+    }
+    .logo {
+        margin-left: 60px;
+    }
+}
+@media (max-width: 650px) {
+    .mob-nav {
+        display: flex;
+        width: 80%;
+        left: 8%;
+    }
+}
+@media (max-width: 400px) {
+    .link a i {
+        font-size: 14px;
+        padding: 4px 0px;
+    }
+    .link a p {
+        font-size: 10px;
+    }
+
+}
+
+/* HOME */
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0rem 10px;
+    margin-bottom: 3rem;
+}
+.name, .para {
+    margin: 20px;
+}
+.name h1{
+    font-size: 15vw;
+    color: #3F51B5;
+}
+.para h2 {
+    font-size: 2.5rem;
+    padding: 10px 0px;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+.para p {
+    line-height: 25px;
+    margin-bottom: 3rem;
+}
+.para a {
+    font-size: 1.2rem;
+    padding: 20px 40px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.para a i {
+    padding-left: 40px;
+}
+.para a:hover {
+    background: #1d1d1d;
+}
+@media (max-width: 1024px) {
+    .name h1 {
+        font-size: 12vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .home {
+        flex-direction: column;
+    }
+    .name h1 {
+        font-size: 15vw;
+    }
+    .para {
+        margin: 10px 20px;
+    }
+    .name {
+        margin: 0px 20px 10px 20px;
+    }
+    .home {
+        margin: 1rem 2rem;
+    }
+}
+
+
+
+/* PROJECTS */
+.projects {
+    margin: 1rem 5rem;
+}
+.projects div {
+    margin: 1rem;
+}
+/* box 1 */
+.box1 {
+    grid-area: box1;
+    height: 300px;
+}
+.box1 h1 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+.box1 p {
+    margin-top: 2rem;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+/* box 2 */
+.box2 {
+    background: black;
+    grid-area: box2;
+    height: fit-content;
+    transition: all 0.4s ease;
+}
+.box2 a{
+    color: white;
+    text-decoration: none;
+}
+.box2:hover{
+    background-color: rgb(41, 41, 41);
+}
+.box2 a h1, .box2 a p {
+    margin: 1rem 2rem;
+}
+.box2 a h1 i {
+    float: right;
+    font-size: 24px;
+}
+.box2 a img {
+    width: 100%;
+}
+
+/* box3 */
+.box3 {
+    background: black;
+    grid-area: box3;
+    transition: all 0.4s ease;
+    height: fit-content;
+}
+.box3 a{
+    color: white;
+    text-decoration: none;
+}
+.box3:hover{
+    background-color: rgb(41, 41, 41);
+}
+.box3 a h1, .box3 a p {
+    margin: 1rem 2rem;
+}
+.box3 a h1 i {
+    float: right;
+    font-size: 24px;
+}
+.box3 a img {
+    width: 100%;
+}
+
+/* box 4 */
+.box4 {
+    background: black;
+    grid-area: box4;
+    transition: all 0.4s ease;
+    height: fit-content;
+}
+.box4 a{
+    color: white;
+    text-decoration: none;
+}
+.box4:hover{
+    background-color: rgb(41, 41, 41);
+}
+.box4 a h1, .box4 a p {
+    margin: 1rem 2rem;
+}
+.box4 a h1 i {
+    float: right;
+    font-size: 24px;
+}
+.box4 a img {
+    width: 100%;
+}
+
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "box1 box2"
+                         "box3 box2"
+                         "box3 box4"
+    ;
+}
+
+
+@media(max-width:1150px) {
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .box1 {
+        width: 500px;
+        height: fit-content;
+    }
+}
+@media (max-width: 650px) {
+    .projects {
+        margin: 0px;
+    }
+    .box2 a h1,.box3 a h1,.box4 a h1{
+        font-size: 20px;
+    }
+    .box2 a h1 i, .box3 a h1 i, .box4 a h1 i {
+        font-size: 16px;
+    }
+    .box2 a p, .box3 a p, .box4 a p {
+        font-size: 15px;
+    }
+    nav {
+        justify-content: center;
+    }
+    .logo {
+        margin: 0px;
+    }
+    .para {
+        margin: 0px;
+    }
+}
+
+
+
+
